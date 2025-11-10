@@ -4,10 +4,9 @@ services:
     environment:
       APP_HOST: mines-wally_web_1
       APP_PORT: 80
-    container_name: mines-wally_app_proxy_1
   web:
     image: >-
-      poliuscorp/wally:1.6
+      poliuscorp/wally:1.6@sha256:3dbefc961d5b4470de9e66d2efd97a01358d34b8917e40528906dfe9b74261f9
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data:/wally/data
